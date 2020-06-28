@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Input Data Undangan</h2>
+            <div class="form-group">
+                <label for="gambar_utama">Cover Undangan :</label>
+                <input type="file" class="form-control" id="gambar_utama" placeholder="Input Sementara Gambar"
+                    name="gambar_utama" onchange="getGambarUtama(event)">
+            </div>
+            <div class="form-group">
+                <label for="gambar_pengantin_wanita">Gambar Pengantin Wanita :</label>
+                <input type="file" class="form-control" id="gambar_pengantin_wanita"
+                    placeholder="Input Sementara Gambar" name="gambar_pengantin_wanita" onchange="getGambarWanita(event)">
+            </div>
+            <div class="form-group">
+                <label for="gambar_pengantin_pria">Gambar Pengantin Pria :</label>
+                <input type="file" class="form-control" id="gambar_pengantin_pria" placeholder="Input Sementara Gambar"
+                    name="gambar_pengantin_pria" onchange="getGambarPria(event)">
+            </div>
+            <div class="form-group">
+                <label for="nama_pengantin_wanita">Nama Pengantin Wanita :</label>
+                <input type="text" class="form-control" id="nama_pengantin_wanita" placeholder="Input Sementara Nama"
+                    name="nama_pengantin_wanita">
+            </div>
+            <div class="form-group">
+                <label for="nama_pengantin_pria">Nama Pengantin Pria :</label>
+                <input type="text" class="form-control" id="nama_pengantin_pria" placeholder="Input Sementara Nama"
+                    name="nama_pengantin_pria">
+            </div>
+            <div class="form-group">
+                <label for="tanggal_pernikahan">Tanggal & Waktu Pernikahan :</label>
+                <input type="datetime-local" class="form-control" id="tanggal_pernikahan" placeholder="Input Sementara Tanggal"
+                    name="tanggal_pernikahan">
+            </div>
+            <div class="form-group">
+                <label for="alamat_resepsi">Alamat Dilaksanakannya Resepsi :</label>
+                <input type="text" class="form-control" id="alamat_resepsi" placeholder="Input Sementara Alamat"
+                    name="alamat_resepsi">
+            </div>
+            <button onclick="return save()" class="btn btn-default">Submit</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
